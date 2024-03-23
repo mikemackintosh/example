@@ -6,9 +6,9 @@ steps:
 - name: test
   image: golang
   commands:
-  - go test
+  - go test ./...
 
 - name: build
   image: golang
   commands:
-  - go build
+  - go build -o artifact cmd/main.go
